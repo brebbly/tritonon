@@ -33,16 +33,18 @@ const LikeButton: React.FC<LikeButtonProps> = ({
 
         const fetchData = async () => {
             const { data, error } = await supabaseClient
-            .from('liked_songs')
-            .select('*')
-            .eq('user_id', user.id)
-            .eq('song_id', songId)
-            .single();
+                .from('liked_songs')
+                .select('*')
+                .eq('user_id', user.id)
+                .eq('song_id', songId)
+                .single();
 
             if (!error && data){
                 setIsLiked(true);
             }
         };
+
+        fetchData();
     }, [songId, supabaseClient, user?.id]);
 
     const Icon = isLiked ? AiFillHeart : AiOutlineHeart;
@@ -91,7 +93,7 @@ const LikeButton: React.FC<LikeButtonProps> = ({
                 transition
             "
         >
-            <Icon color={isLiked ? '#22c55e' : 'white'} size={25}/>
+            <Icon color={isLiked ? '#3b82f6' : 'white'} size={25}/>
         </button>
     );
 }

@@ -22,11 +22,11 @@ export default async function Home() {
           <h1
             className="
             text-white
-            text-3xl
+            text-4xl
             font-semibold
             "
           >
-            Welcome back, name {/* find the users name and add it */}
+            welcome to scrapd {/* find the users name and add it */}
           </h1>
         </div>
         <div

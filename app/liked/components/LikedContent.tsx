@@ -2,6 +2,7 @@
 
 import LikeButton from "@/components/LikeButton";
 import MediaItem from "@/components/MediaItem";
+import useAuthModal from "@/hooks/useAuthModal";
 import useOnPlay from "@/hooks/useOnPlay";
 import { useUser } from "@/hooks/useUser";
 import { Song } from "@/types";
@@ -17,7 +18,7 @@ const LikedContent: React.FC<LikedContentProps> = ({
 }) => {
     const router = useRouter();
     const { isLoading, user } = useUser();
-    const onPlay = useOnPlay(songs); 
+    const onPlay = useOnPlay(songs);
 
     useEffect(() => {
         if (!isLoading && !user){

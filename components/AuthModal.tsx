@@ -47,7 +47,7 @@ const AuthModal = () => {
                 providers={["google", "discord", "github"]}
                 supabaseClient = {supabaseClient}
                 appearance = {{
-                    theme: ThemeSupa,
+                    theme: ThemeMinimal,
                     variables:{
                         default: {
                             colors: {
